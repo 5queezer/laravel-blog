@@ -22,61 +22,14 @@
       <div class="row">
         <div class="col-md-8">
 
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Ullamco efflorescere o consequat. Eram nescius nam quem quid eu arbitror ne
-              excepteur ubi probant graviterque ex mandaremus o proident exquisitaque e
-              offendit. Iis constias ne quamquam hic ne sint anim sunt excepteur, quo a export
-              tempor quid, do de quorum esse anim, esse doctrina adipisicing non senserit aute
-              id voluptate domesticarum id a tamen illum quis proident id irure si
-              nostrud.Excepteur velit aliquip. O de minim admodum, legam se iudicem nam quem.
-              Quo nulla nostrud doctrina.
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
+          @foreach ($posts as $post)
+            <div class="post">
+              <h3>{{ $post->title }}</h3>
+              <p>{{ substr($post->body, 0, 300) }}{{ strlen($post->body) > 300 ? '...' : '' }}</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          @endforeach
 
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Ullamco efflorescere o consequat. Eram nescius nam quem quid eu arbitror ne
-              excepteur ubi probant graviterque ex mandaremus o proident exquisitaque e
-              offendit. Iis constias ne quamquam hic ne sint anim sunt excepteur, quo a export
-              tempor quid, do de quorum esse anim, esse doctrina adipisicing non senserit aute
-              id voluptate domesticarum id a tamen illum quis proident id irure si
-              nostrud.Excepteur velit aliquip. O de minim admodum, legam se iudicem nam quem.
-              Quo nulla nostrud doctrina.
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Ullamco efflorescere o consequat. Eram nescius nam quem quid eu arbitror ne
-              excepteur ubi probant graviterque ex mandaremus o proident exquisitaque e
-              offendit. Iis constias ne quamquam hic ne sint anim sunt excepteur, quo a export
-              tempor quid, do de quorum esse anim, esse doctrina adipisicing non senserit aute
-              id voluptate domesticarum id a tamen illum quis proident id irure si
-              nostrud.Excepteur velit aliquip. O de minim admodum, legam se iudicem nam quem.
-              Quo nulla nostrud doctrina.
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-
-          <div class="post">
-            <h3>Post Title</h3>
-            <p>
-              Ullamco efflorescere o consequat. Eram nescius nam quem quid eu arbitror ne
-              excepteur ubi probant graviterque ex mandaremus o proident exquisitaque e
-              offendit. Iis constias ne quamquam hic ne sint anim sunt excepteur, quo a export
-              tempor quid, do de quorum esse anim, esse doctrina adipisicing non senserit aute
-              id voluptate domesticarum id a tamen illum quis proident id irure si
-              nostrud.Excepteur velit aliquip. O de minim admodum, legam se iudicem nam quem.
-              Quo nulla nostrud doctrina.
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
         </div>
         <div class="col-md-3 col-md-offset-1 text-warning" >
           <h2>Sidebar</h2>
