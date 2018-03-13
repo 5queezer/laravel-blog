@@ -11,7 +11,7 @@
             <p class="lead">
               Thank you for visit. This is my test website.
               <br />
-              <small><a href="https://www.youtube.com/watch?v=WzQb26QOmUM&index=16&list=PLwAKR305CRO-Q90J---jXVzbOd4CDRbVx">FAQs [How to Build a Blog with Laravel]</a></small>
+              <small><a href="Part 23 - Adding Slugs to our Posts CRUD [How to Build a Blog with Laravel 5 Series]">Part 23 - Adding Slugs to our Posts CRUD [How to Build a Blog with Laravel 5 Series]</a></small>
             </p>
             <p>
               <a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a>
