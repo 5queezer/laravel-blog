@@ -12,6 +12,15 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
+  // Authentication Routes
+  Route::get('auth/login', 'Auth\LoginController@getLogin');
+  Route::post('auth/login', 'Auth\LoginController@postLogin');
+  route::get('auth/logout', 'Auth\LoginController@getLogout');
+
+  // Registration Routes
+  Route::get('auth/register', 'Auth\RegisterController@getRegister');
+  Route::get('auth/register', 'Auth\RegisterController@getRegister');
+
   Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
   Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
   Route::get('contact', 'PagesController@getContact');
