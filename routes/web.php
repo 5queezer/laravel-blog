@@ -19,8 +19,12 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/', 'PagesController@getIndex');
   Route::resource('posts', 'PostController');
 
+  // login and logout routes
   Auth::routes();
-  
+
+  // Categories
+  Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+
   Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
   Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
   Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
