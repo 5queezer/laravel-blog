@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
   <head>
     @include('partials._head')
     @yield('stylesheets')
@@ -9,6 +9,9 @@
 
     <div class="container">
       @include ('partials._messages')
+
+      {{ Auth::check() ? 'Logged in' : 'Logged out' }}
+
       @yield('content')
       @include('partials._footer')
     </div>
