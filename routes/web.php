@@ -24,6 +24,7 @@ Route::group(['middleware' => ['web']], function () {
 
   // Categories
   Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+  Route::resource('tags', 'TagController', ['except' => ['create']]);
 
   Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
   Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
